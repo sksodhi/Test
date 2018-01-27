@@ -1,0 +1,12 @@
+
+
+root@mx86-29:~/Test# ls -l
+total 16
+-rw-r--r-- 1 root root  71 Jan 27 21:27 Makefile.am
+-rw-r--r-- 1 root root 109 Jan 27 21:22 README.md
+-rw-r--r-- 1 root root 112 Jan 27 21:27 configure.ac
+-rw-r--r-- 1 root root  71 Jan 27 21:22 main.cpp
+
+root@mx86-29:~/Test# aclocal || die "aclocal failed"
+root@mx86-29:~/Test# automake --add-missing --force-missing --copy --foreign || die "automake failed"
+root@mx86-29:~/Test# autoreconf || die "autoreconf failed"
